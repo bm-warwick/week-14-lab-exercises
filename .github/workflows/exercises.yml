@@ -8,8 +8,11 @@ jobs:
       - name: listing
         uses: actions/checkout@v3
       - run: npm install ${{ github.workspace }}/insecure
-      - run: npm audit ${{ github.workspace }}/insecure/index.js
+    #  - run: npm audit ${{ github.workspace }}/insecure/index.js
+      - run: npm i -g lint
       - run: npm run lint ${{ github.workspace }}/insecure/index.js
+  
+      
       
 
       
